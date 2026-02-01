@@ -13,5 +13,5 @@ fn main() {
     // Step 3 : Read the value from key
     let val = v.get("cle").unwrap().as_i64().unwrap();
 
-    println!("val is : {}", val)
+    println!("val is : {}", val);
 }

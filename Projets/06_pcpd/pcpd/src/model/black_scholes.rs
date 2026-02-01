@@ -81,7 +81,7 @@ impl BlackScholesModel {
 }
 
 impl BlackScholesModel {
-    pub fn asset(&self, rng: &mut ThreadRng) -> Array2<f64> {
+    pub fn gen_path(&self, rng: &mut ThreadRng) -> Array2<f64> {
         let d = self.model_size;
         let r = self.interest_rate;
         let n = self.fixings_dates_number;

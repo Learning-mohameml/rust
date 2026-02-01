@@ -3,8 +3,6 @@ use std::ops::Sub;
 use ndarray::{Array1, Array2};
 use serde_json::Value;
 
-// use crate::{ options::{asian::AsianOption, option::Option}};
-
 use crate::options::option::Option;
 
 pub struct BasketOption {
@@ -24,7 +22,7 @@ impl BasketOption {
 }
 
 impl BasketOption {
-    fn from_json(json: &Value) -> Self {
+    pub fn from_json(json: &Value) -> Self {
         let strike = json["strike"].as_f64().unwrap();
 
         let model_size = json["option size"].as_i64().unwrap() as usize;

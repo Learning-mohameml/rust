@@ -21,7 +21,7 @@ impl AsianOption {
 }
 
 impl AsianOption {
-    fn from_json(json: &Value) -> Self {
+    pub fn from_json(json: &Value) -> Self {
         let strike = json["strike"].as_f64().unwrap();
 
         let model_size = json["option size"].as_i64().unwrap() as usize;
